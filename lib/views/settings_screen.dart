@@ -52,7 +52,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 setState(() {
                   selectedStatus = value!;
                 });
-                saveSettings(); // Save the selected status when changed
+                saveSettings();
               },
               decoration: InputDecoration(
                 filled: true,
@@ -65,22 +65,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
             SizedBox(height: 24),
             Center(
               child: SizedBox(
-                width: double.infinity, // Full width of the parent container
+                width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    saveSettings(); // Save settings when the button is pressed
+                    saveSettings();
                     Get.back();
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green.shade900,
-                    padding: EdgeInsets.symmetric(vertical: 16.0), // Increase height
+                    padding: EdgeInsets.symmetric(vertical: 16.0),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // Rounded corners
+                      borderRadius: BorderRadius.circular(12),
                     ),
                   ),
                   child: Text(
                     'Save',
-                    style: TextStyle( color: Colors.white,fontSize: 18), // Increase font size
+                    style: TextStyle( color: Colors.white,fontSize: 18),
                   ),
                 ),
               ),

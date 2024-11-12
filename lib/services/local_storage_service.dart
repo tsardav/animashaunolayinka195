@@ -21,7 +21,7 @@ class LocalStorageService {
   Future<void> deleteStudent(String id) async {
     final prefs = await SharedPreferences.getInstance();
     final students = await getStudents();
-    students.removeWhere((student) => student.id == id); // Delete by `id`
+    students.removeWhere((student) => student.id == id);
     prefs.setStringList(_studentKey, students.map((e) => json.encode(e.toJson())).toList());
   }
 }

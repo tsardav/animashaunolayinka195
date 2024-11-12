@@ -24,7 +24,6 @@ class MainScreenState extends State<MainScreen> {
     });
   }
 
-  // Method to update selected index from outside this widget
   void updateSelectedIndex(int index) {
     setState(() {
       _selectedIndex = index;

@@ -12,12 +12,12 @@ class Student {
   final String profilePhotoUrl;
 
   Student({
-    String? id, // Make the ID optional
+    String? id,
     required this.name,
     required this.email,
     required this.enrollmentStatus,
     required this.profilePhotoUrl,
-  }) : id = id ?? Uuid().v4(); // Generate a unique ID if not provided
+  }) : id = id ?? Uuid().v4();
 
   factory Student.fromJson(Map<String, dynamic> json) => _$StudentFromJson(json);
   Map<String, dynamic> toJson() => _$StudentToJson(this);

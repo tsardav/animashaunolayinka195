@@ -89,12 +89,11 @@ class AddStudentScreen extends StatelessWidget {
                         name: _nameController.text,
                         email: _emailController.text,
                         enrollmentStatus: _enrollmentStatus,
-                        profilePhotoUrl: '', // Placeholder for profile photo URL
+                        profilePhotoUrl: '',
                       );
 
                       studentViewModel.addStudent(newStudent);
 
-                      // Show success message
                       Get.snackbar(
                         'Success',
                         'Student added successfully!',
@@ -103,10 +102,8 @@ class AddStudentScreen extends StatelessWidget {
                         colorText: Colors.white,
                       );
 
-                      // Add a short delay before navigating back
                       await Future.delayed(Duration(seconds: 1));
 
-                      // Navigate back to HomeScreen by setting selectedIndex to 0
                       Get.find<MainScreenState>().updateSelectedIndex(0);
                     }
                   },
